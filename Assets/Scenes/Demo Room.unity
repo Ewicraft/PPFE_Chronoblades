@@ -4129,6 +4129,11 @@ PrefabInstance:
       propertyPath: energyCount
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4397580493807793496, guid: 3c02ac99ebd71b24cb0f7c53261c4241,
+        type: 3}
+      propertyPath: blockCooldown
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6765029023463945334, guid: 3c02ac99ebd71b24cb0f7c53261c4241,
         type: 3}
       propertyPath: player

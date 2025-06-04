@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class EnemyBulletScript : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
 
-    private bool hasBeenDeflected =false;
+    public bool hasBeenDeflected =false;
 
     public float force;
     void Start()
@@ -28,10 +28,14 @@ public class NewBehaviourScript : MonoBehaviour
             Destroy(this.gameObject);
         } else if(other.gameObject.layer == 8){
             Destroy(this.gameObject);
-        } else if(hasBeenDeflected == true && other.gameObject.layer == 9){
+        } else if(other.gameObject.layer == 9 && hasBeenDeflected){
             other.GetComponent<EnemyManager>().IsKilled();
             Destroy(this.gameObject);
         }
+    }
+
+    public void Deflected(){
+        hasBeenDeflected =true;
     }
     
 }

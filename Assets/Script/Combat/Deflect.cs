@@ -73,6 +73,7 @@ public class Deflect : MonoBehaviour
             other.GetComponent<Rigidbody2D>().velocity = other.GetComponent<Rigidbody2D>().velocity * -1;
             GetComponentInParent<PlayerGun>().AddBullet(ammunitionsAdded);
             Debug.Log(ammunitionsAdded + " were added");
+            other.GetComponent<EnemyBulletScript>().Deflected();
         }
     }
 

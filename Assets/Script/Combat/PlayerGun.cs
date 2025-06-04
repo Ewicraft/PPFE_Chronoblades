@@ -16,6 +16,8 @@ public class PlayerGun : MonoBehaviour
 
     [SerializeField] private int ammunitions;
 
+    private int maxBullets;
+
     private GameObject gunObject;
     private bool gunFlipMov = true;
     public GameObject[] ammoUI;
@@ -24,6 +26,7 @@ public class PlayerGun : MonoBehaviour
     {
         gunObject = GameObject.Find("Gun");
         gunObject.SetActive(false);
+        maxBullets = ammunitions;
         // for(int i = 0; i <= 5; i++){
         //     ammoUI[i].gameObject.SetActive(false);
         // }
@@ -115,9 +118,16 @@ public class PlayerGun : MonoBehaviour
     public void AddBullet(int bullets)
     {
         ammunitions += bullets;
-        for(int i = 0; i <= 5; i++)
+        if(ammunitions < maxBullets)
         {
-            ammoUI[i].gameObject.SetActive(true);
+            ammunitions = maxBullets;
+        }
+        else
+        {
+            for(int i = 0; i <= 5; i++)
+            {
+                ammoUI[i].gameObject.SetActive(true);
+            }
         }
     }
 }
