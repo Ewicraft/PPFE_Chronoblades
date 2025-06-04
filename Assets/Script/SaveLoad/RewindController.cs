@@ -6,8 +6,11 @@ public class RewindController : MonoBehaviour
 {
     public Vector3 pos;
     public bool isSaved = false;
-
     public GameObject player;
+
+    private bool isAlive = false;
+
+    public bool isPlayer =false;
 
 
     void Start()
@@ -29,13 +32,19 @@ public class RewindController : MonoBehaviour
     public void Rewind(){
         this.transform.position = pos;
         isSaved = false;
-        player.GetComponent<PlayerReloadController>().SaveActive(isSaved);
+        if(isAlive){
+            gameObject.SetActive(true);
+        }
+        if(isPlayer) GetComponent<PlayerReloadController>().SaveActive(isSaved);
     }
 
     void Save(){
         pos = this.transform.position;
+        if(isActiveAndEnabled){
+            isAlive = true;
+        }
         isSaved = true;  
-        player.GetComponent<PlayerReloadController>().SaveActive(isSaved);
+        if(isPlayer) GetComponent<PlayerReloadController>().SaveActive(isSaved);
     }
 
 }

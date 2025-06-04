@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
 
     public float range;
 
-    public float shootCooldown = 2f;
+    public float shootCooldown = 4f;
     public Transform gunPos;
     [SerializeField] private GameObject enemyBulletPrefab;
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class PlayerGun : MonoBehaviour
@@ -13,15 +14,19 @@ public class PlayerGun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletSpeed;
 
-    [SerializeField] private float ammunitions;
+    [SerializeField] private int ammunitions;
 
     private GameObject gunObject;
     private bool gunFlipMov = true;
+    public GameObject[] ammoUI;
 
     void Start()
     {
         gunObject = GameObject.Find("Gun");
         gunObject.SetActive(false);
+        // for(int i = 0; i <= 5; i++){
+        //     ammoUI[i].gameObject.SetActive(false);
+        // }
     }
 
 
@@ -96,6 +101,7 @@ public class PlayerGun : MonoBehaviour
             GameObject newBullet = Instantiate(bulletPrefab, gun.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * bulletSpeed;
             ammunitions -= 1;
+            ammoUI[ammunitions].gameObject.SetActive(false);
             Debug.Log(ammunitions + " are left");
             if (isActiveAndEnabled == true)
             {
@@ -106,5 +112,12 @@ public class PlayerGun : MonoBehaviour
 
     private void GunOff() => gunObject.SetActive(false);
 
-    public void AddBullet(float bullets) => ammunitions += bullets;
+    public void AddBullet(int bullets)
+    {
+        ammunitions += bullets;
+        for(int i = 0; i <= 5; i++)
+        {
+            ammoUI[i].gameObject.SetActive(true);
+        }
+    }
 }

@@ -8,7 +8,7 @@ public class PlayerSlash : MonoBehaviour
     public float slashRadius = 1f;
     public LayerMask EnemyLayer;
 
-    public float cooldownTime = .5f;
+    public float cooldownTime = 0.5f;
 
     public float cooldownTimer = 0f;
 

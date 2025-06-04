@@ -8,6 +8,8 @@ public class NewBehaviourScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
 
+    private bool hasBeenDeflected =false;
+
     public float force;
     void Start()
     {
@@ -21,11 +23,14 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.layer == 10){
+        if(other.gameObject.layer == 10 && hasBeenDeflected ==false){
             other.GetComponent<PlayerReloadController>().IsKilled();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         } else if(other.gameObject.layer == 8){
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        } else if(hasBeenDeflected == true && other.gameObject.layer == 9){
+            other.GetComponent<EnemyManager>().IsKilled();
+            Destroy(this.gameObject);
         }
     }
     

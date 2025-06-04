@@ -10,7 +10,7 @@ public class Deflect : MonoBehaviour
     private bool isBlockReady =true;
     [SerializeField] private float blockDuration = 0.25f;
 
-    [SerializeField] private float ammunitionsAdded;
+    [SerializeField] private int ammunitionsAdded;
 
 
     void Update()
@@ -71,7 +71,7 @@ public class Deflect : MonoBehaviour
             // other.GetComponent<Rigidbody2D>().velocity = reflected.normalized * mag;
 
             other.GetComponent<Rigidbody2D>().velocity = other.GetComponent<Rigidbody2D>().velocity * -1;
-            GetComponent<PlayerGun>().AddBullet(ammunitionsAdded);
+            GetComponentInParent<PlayerGun>().AddBullet(ammunitionsAdded);
             Debug.Log(ammunitionsAdded + " were added");
         }
     }
