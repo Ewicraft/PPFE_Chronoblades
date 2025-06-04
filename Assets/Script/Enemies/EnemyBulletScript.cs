@@ -19,4 +19,14 @@ public class NewBehaviourScript : MonoBehaviour
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
     }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.layer == 10){
+            other.GetComponent<PlayerReloadController>().IsKilled();
+            Destroy(gameObject);
+        } else if(other.gameObject.layer == 8){
+            Destroy(gameObject);
+        }
+    }
+    
 }

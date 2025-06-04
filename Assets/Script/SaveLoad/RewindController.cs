@@ -7,6 +7,14 @@ public class RewindController : MonoBehaviour
     public Vector3 pos;
     public bool isSaved = false;
 
+    public GameObject player;
+
+
+    void Start()
+    {
+        player = this.gameObject;
+    }
+
     void Update(){
 
         if(Input.GetKeyDown(KeyCode.E)){
@@ -18,14 +26,16 @@ public class RewindController : MonoBehaviour
         }
     }
 
-    void Rewind(){
+    public void Rewind(){
         this.transform.position = pos;
         isSaved = false;
+        player.GetComponent<PlayerReloadController>().SaveActive(isSaved);
     }
 
     void Save(){
         pos = this.transform.position;
         isSaved = true;  
+        player.GetComponent<PlayerReloadController>().SaveActive(isSaved);
     }
 
 }

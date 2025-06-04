@@ -1,0 +1,1074 @@
+fileFormatVersion: 2
+guid: 75a03a12372479047972a0265cef8325
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 451
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81079fcbe28fcbc4b9eca92378f10bc9
+      internalID: -1078513466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 451
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5611c31d71af0ab42acb79ad7613f5d3
+      internalID: -1251345525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 451
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfd2ec14f88d56489390c65617094b4
+      internalID: 2020121957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 451
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50164b526fcc42d448c8419252319761
+      internalID: 486964518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 451
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a235e73444bcf44ab95c4c702cf7d06
+      internalID: -221853544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 451
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985884d86124c4b4297af0303a8f9446
+      internalID: 727883570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 451
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556ba98c35d6baf4385c5629c3d2b75b
+      internalID: 1815170041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_7
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 451
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8afcc3611b967948b58af6676ae9225
+      internalID: 1036088420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 387
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ff5f702d8ba446865f1395b034831
+      internalID: 1864393958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 387
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c40a040c8347240a8ab49a86932142
+      internalID: 656276722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 387
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22339cb9ebb55547be95383838d0385
+      internalID: 1633290380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 387
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f97b3516809ea448e6f4bc81d665d0
+      internalID: -669886447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_12
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 387
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9332b4ee8361db54391656a95a2eae70
+      internalID: -248579833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_13
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 387
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60975be5f1dec644fb5b4ba2ca0577f3
+      internalID: -133758698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_14
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 387
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b381c5cfec3e41740ab8a06f74270d8a
+      internalID: 1510210046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_15
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 387
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18909c8890f1524468984c5316eddc88
+      internalID: -1349773461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 323
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b264be1e2b63ac3469a699b6e80c7332
+      internalID: -188851027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 323
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e13ed1ed0e10441a2356996d1c1a26
+      internalID: 537325428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_18
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 269
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17996615508f1b14c89a7f43d0d9df6b
+      internalID: -1702282167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_19
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 269
+        width: 109
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946cad11be83dac448c670d6827fad6d
+      internalID: -1719940878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 357
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bce1991b4678241950019cbfd2b0b4
+      internalID: -48550538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_21
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 330
+        width: 127
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16db4e8fd3a07184dacda661bf0661b5
+      internalID: -2126294302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 276
+        width: 53
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d31996ea3704d5438172a118872d738
+      internalID: 1374588351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_23
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 289
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240f94ca1a3384442a6ed876885ac7f6
+      internalID: -46999823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_24
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 284
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d9bc6c0b7eb1a42bc971176073a08a
+      internalID: -1556684683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_25
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 283
+        width: 37
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aae0772d9530d941aa4a923ae9b293d
+      internalID: 1172044442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_26
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 272
+        width: 121
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa4ad9017062b64a92c5e11ac117127
+      internalID: 349569923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 202
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d65cc3143383ad4ab9d92df31bb060d
+      internalID: 1442341098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 195
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3b7fb29a09f3345abb032bffabf9be
+      internalID: -1843415496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 235
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd28939cbced1541b4eeda37aff8bfc
+      internalID: 767209012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_30
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 208
+        width: 127
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db71f125fe6d15c44a030fd93a4fc9f2
+      internalID: 1261594033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 151
+        width: 110
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae21ca1c9fff22479c30f21761efb17
+      internalID: -1776759724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 190
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708014742f5831d43802972fe1181bbb
+      internalID: 1615660288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_33
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 185
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc6096c44d1be64791031cfd813ad84
+      internalID: -1449019898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_34
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 190
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880d7f7b161952344918d33e7adaf441
+      internalID: -1805855926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_35
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 133
+        width: 20
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ad5675161373c498a597eca6d1e572
+      internalID: -1633602687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7d6b8a9114ea14cb06cf53075eeae1
+      internalID: -1630944843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_37
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 153
+        width: 38
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810980e48263b894c9dc46643e9cc6f7
+      internalID: 606352959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_38
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 144
+        width: 121
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9b7e217739adc47a9dc98ae01ca2ee
+      internalID: 1861118113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 240
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac25c9250949b304d967a41d75baead8
+      internalID: -641275876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_41
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 122
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc12e1be71ce03f46ba702f264e111ee
+      internalID: 912497507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_42
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 80
+        width: 227
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f50e62dead3071459e51b717aada494
+      internalID: 2046232780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-UI-essentials - dark_43
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 23
+        width: 223
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3b73851b9f230428a8cd5c31462b2b
+      internalID: 1260013772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      scifi-UI-essentials - dark_0: -1078513466
+      scifi-UI-essentials - dark_1: -1251345525
+      scifi-UI-essentials - dark_10: 1633290380
+      scifi-UI-essentials - dark_11: -669886447
+      scifi-UI-essentials - dark_12: -248579833
+      scifi-UI-essentials - dark_13: -133758698
+      scifi-UI-essentials - dark_14: 1510210046
+      scifi-UI-essentials - dark_15: -1349773461
+      scifi-UI-essentials - dark_16: -188851027
+      scifi-UI-essentials - dark_17: 537325428
+      scifi-UI-essentials - dark_18: -1702282167
+      scifi-UI-essentials - dark_19: -1719940878
+      scifi-UI-essentials - dark_2: 2020121957
+      scifi-UI-essentials - dark_20: -48550538
+      scifi-UI-essentials - dark_21: -2126294302
+      scifi-UI-essentials - dark_22: 1374588351
+      scifi-UI-essentials - dark_23: -46999823
+      scifi-UI-essentials - dark_24: -1556684683
+      scifi-UI-essentials - dark_25: 1172044442
+      scifi-UI-essentials - dark_26: 349569923
+      scifi-UI-essentials - dark_27: 1442341098
+      scifi-UI-essentials - dark_28: -1843415496
+      scifi-UI-essentials - dark_29: 767209012
+      scifi-UI-essentials - dark_3: 486964518
+      scifi-UI-essentials - dark_30: 1261594033
+      scifi-UI-essentials - dark_31: -1776759724
+      scifi-UI-essentials - dark_32: 1615660288
+      scifi-UI-essentials - dark_33: -1449019898
+      scifi-UI-essentials - dark_34: -1805855926
+      scifi-UI-essentials - dark_35: -1633602687
+      scifi-UI-essentials - dark_36: -1630944843
+      scifi-UI-essentials - dark_37: 606352959
+      scifi-UI-essentials - dark_38: 1861118113
+      scifi-UI-essentials - dark_39: 1218128501
+      scifi-UI-essentials - dark_4: -221853544
+      scifi-UI-essentials - dark_40: -641275876
+      scifi-UI-essentials - dark_41: 912497507
+      scifi-UI-essentials - dark_42: 2046232780
+      scifi-UI-essentials - dark_43: 1260013772
+      scifi-UI-essentials - dark_5: 727883570
+      scifi-UI-essentials - dark_6: 1815170041
+      scifi-UI-essentials - dark_7: 1036088420
+      scifi-UI-essentials - dark_8: 1864393958
+      scifi-UI-essentials - dark_9: 656276722
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

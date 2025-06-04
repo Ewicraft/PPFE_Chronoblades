@@ -12,6 +12,13 @@ public class PlayerSlash : MonoBehaviour
 
     public float cooldownTimer = 0f;
 
+    // public SpriteRenderer SlashSprite;
+    public Animator SlashAnim;
+
+    void Start()
+    {
+        // SlashSprite.enabled = false;   
+    }
 
     private void Update()
     {
@@ -20,11 +27,15 @@ public class PlayerSlash : MonoBehaviour
             if (Input.GetKey(KeyCode.K))
             {
                 Debug.Log("Slash");
+                SlashAnim.SetBool("Slash",true);
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(slashOrigin.position, slashRadius, EnemyLayer);
+                // SlashSprite.enabled = true;
                 foreach (var enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemyManager>().IsKilled();
                 }
+                Invoke("SlashAnimEnd", 1.75f);
+
             }
             cooldownTimer = cooldownTime;
         }
@@ -32,8 +43,10 @@ public class PlayerSlash : MonoBehaviour
         {
             cooldownTimer -= Time.deltaTime;
         }
+    }
 
-
+    void SlashAnimEnd(){
+        SlashAnim.SetBool("Slash",false);
     }
 
 

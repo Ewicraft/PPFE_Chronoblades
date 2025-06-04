@@ -10,8 +10,8 @@ public class Deflect : MonoBehaviour
     private bool isBlockReady =true;
     [SerializeField] private float blockDuration = 0.25f;
 
-
     [SerializeField] private float ammunitionsAdded;
+
 
     void Update()
     {
