@@ -8,9 +8,9 @@ public class PlayerSlash : MonoBehaviour
     public float slashRadius = 1f;
     public LayerMask EnemyLayer;
 
-    public float cooldownTime = 0.5f;
+    public float cooldownTime = 0.75f;
 
-    public float cooldownTimer = 0f;
+    public float timer;
 
     // public SpriteRenderer SlashSprite;
     public Animator SlashAnim;
@@ -22,38 +22,31 @@ public class PlayerSlash : MonoBehaviour
 
     private void Update()
     {
-        if (cooldownTimer <= 0)
+        timer += Time.deltaTime;
+        if (timer > cooldownTime && Input.GetKeyDown(KeyCode.K)||Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if (Input.GetKey(KeyCode.K))
-            {
-                Debug.Log("Slash");
-                SlashAnim.SetBool("Slash",true);
-                Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(slashOrigin.position, slashRadius, EnemyLayer);
-                // SlashSprite.enabled = true;
-                foreach (var enemy in enemiesInRange)
-                {
-                    enemy.GetComponent<EnemyManager>().IsKilled();
-                }
-                Invoke("SlashAnimEnd", 1.75f);
-
-            }
-            cooldownTimer = cooldownTime;
-        }
-        else
-        {
-            cooldownTimer -= Time.deltaTime;
+            timer = 0;
+            Attack();
         }
     }
 
-    void SlashAnimEnd(){
-        SlashAnim.SetBool("Slash",false);
+
+    private void Attack()
+    {
+        Debug.Log("slash");
+        SlashAnim.SetTrigger("Slash");
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(slashOrigin.position, slashRadius, EnemyLayer);
+        foreach (Collider2D enemy in enemiesInRange)
+        {
+            enemy.GetComponentInParent<EnemyManager>().IsKilled();
+        }
     }
 
-
-    // private void OnDrawGizmos()
-    // {
-    //     Gizmos.DrawWireSphere(slashOrigin.position, slashRadius);
-    // }
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(slashOrigin.position, slashRadius);
+    }
    
 
 }

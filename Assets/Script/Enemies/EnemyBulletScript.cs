@@ -23,13 +23,13 @@ public class EnemyBulletScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.layer == 10 && hasBeenDeflected ==false){
+        if(other.gameObject.layer == 10 && hasBeenDeflected == false){
             other.GetComponent<PlayerReloadController>().IsKilled();
             Destroy(this.gameObject);
         } else if(other.gameObject.layer == 8){
             Destroy(this.gameObject);
         } else if(other.gameObject.layer == 9 && hasBeenDeflected){
-            other.GetComponent<EnemyManager>().IsKilled();
+            other.GetComponentInParent<EnemyManager>().IsKilled();
             Destroy(this.gameObject);
         }
     }

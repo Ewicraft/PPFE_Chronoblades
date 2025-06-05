@@ -4,12 +4,55 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject self;
 
+    public bool isSaved;
 
+    public Vector3 position;
+
+    public bool isAlive;
+    public void Loading()
+    {
+        if (isSaved)
+        {
+            Rewind();
+        }
+        else
+        {
+            Save();
+        }
+    }
+    public GameObject enemy;
     public void IsKilled()
     {
-        Debug.Log("Ouch!");
-        self.SetActive(false);
+        enemy.SetActive(false);
+    }
+
+    public void IsAlived()
+    {
+        enemy.SetActive(true);
+    }
+
+    private void Rewind()
+    {
+        if (isAlive == true)
+        {
+            enemy.transform.position = position;
+            IsAlived();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+    }
+
+    public void Save()
+    {
+        isSaved = true;
+        position = enemy.transform.position;
+        if (enemy.gameObject.activeSelf)
+        {
+            isAlive = true;
+        }
     }
 }

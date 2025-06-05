@@ -10,15 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8184551872757057452}
   - component: {fileID: 8184551872757057453}
-  - component: {fileID: 4710893155039764292}
-  - component: {fileID: 6569043207774489554}
   - component: {fileID: 8184551872757057454}
   - component: {fileID: 8184551872757057455}
   - component: {fileID: 8184551872757057440}
   - component: {fileID: 4505168199122028435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_Base
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +80,7 @@ SpriteRenderer:
   m_SortingOrder: 50
   m_Sprite: {fileID: 362034909, guid: 34a68884a9722b8439bf31182febb881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.21, y: 0.22}
@@ -91,33 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4710893155039764292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8184551872757057441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bcaa45524336044aa0788c9bea27a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  self: {fileID: 8184551872757057441}
---- !u!114 &6569043207774489554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8184551872757057441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f30d159c9b9a04b98abbc508bcafc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  isSaved: 0
 --- !u!95 &8184551872757057454
 Animator:
   serializedVersion: 5
@@ -200,12 +171,14 @@ MonoBehaviour:
   - {fileID: 8184551873770569015}
   - {fileID: 8184551874347144090}
   nextID: 0
-  speed: 2
+  speed: 0
   enemyAnim: {fileID: 8184551872757057454}
   player: {fileID: 0}
   timer: 0
-  range: 15
+  range: 7
+  shootCooldown: 1.5
   gunPos: {fileID: 1534017957021311968}
+  bulletSpeed: 5
   enemyBulletPrefab: {fileID: 3768251072347218045, guid: 25128e258cb82444daedc55e7b2af2bb,
     type: 3}
 --- !u!50 &4505168199122028435
@@ -244,9 +217,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184551873229480953}
-  m_Layer: 0
+  - component: {fileID: 2963137696808005714}
+  m_Layer: 9
   m_Name: Enemy_Base_Root
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,6 +242,22 @@ Transform:
   - {fileID: 8184551873981616401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2963137696808005714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184551873229480954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bcaa45524336044aa0788c9bea27a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSaved: 0
+  position: {x: 0, y: 0, z: 0}
+  isAlive: 1
+  enemy: {fileID: 8184551872757057441}
 --- !u!1 &8184551873770569032
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184551873770569015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -293,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 8184551873770569032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.86, y: 0, z: 0}
+  m_LocalPosition: {x: -2.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -308,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184551873981616401}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184551874347144090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -357,7 +347,7 @@ Transform:
   m_GameObject: {fileID: 8184551874347144091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.43, y: 0, z: 0}
+  m_LocalPosition: {x: 2.11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -372,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1534017957021311968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

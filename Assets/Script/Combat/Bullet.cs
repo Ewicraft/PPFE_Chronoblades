@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     {
         if (enemy.CompareTag("Enemy"))
         {
-            enemy.GetComponent<EnemyManager>().IsKilled();
+            enemy.GetComponentInParent<EnemyManager>().IsKilled();
             Destroy (gameObject);
         } 
         else if(enemy.CompareTag("Player")){

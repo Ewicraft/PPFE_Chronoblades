@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using System.Threading;
 
 public class Deflect : MonoBehaviour
 {
     private bool isActive = false;
 
     [SerializeField]  private float blockCooldown = 3;
-    private bool isBlockReady =true;
+    
     [SerializeField] private float blockDuration = 0.25f;
 
     [SerializeField] private int ammunitionsAdded;
 
+    public Image cooldownImage;
+
+    private float timer;
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isBlockReady == true)
+        timer += Time.deltaTime;
+        cooldownImage.fillAmount = timer / blockCooldown;
+        if (Input.GetKeyDown(KeyCode.LeftShift) && timer > blockCooldown)
         {
             Debug.Log("Parried");
             Parry();
@@ -30,31 +38,12 @@ public class Deflect : MonoBehaviour
 
     private void Parry()
     {
-        isBlockReady = false;
-        Debug.Log("IsBlockReady");
         isActive = true;
-        StartCoroutine(BlockCooldown(blockCooldown));
         Debug.Log("Deflected");
+        timer = 0;
     }
 
 
-    IEnumerator BlockCooldown(float duration)
-    {
-        if (isBlockReady)
-        {
-            yield return new WaitForSeconds(duration);
-
-            isBlockReady = true;
-        }
-        else
-        {
-            isBlockReady = false; 
-            
-            yield return new WaitForSeconds(duration);
-
-            isBlockReady = true;
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -70,7 +59,7 @@ public class Deflect : MonoBehaviour
             // float mag = other.transform.GetComponent<Rigidbody2D>().velocity.magnitude;
             // other.GetComponent<Rigidbody2D>().velocity = reflected.normalized * mag;
 
-            other.GetComponent<Rigidbody2D>().velocity = other.GetComponent<Rigidbody2D>().velocity * -1;
+            other.GetComponent<Rigidbody2D>().velocity = other.GetComponent<Rigidbody2D>().velocity * -2;
             GetComponentInParent<PlayerGun>().AddBullet(ammunitionsAdded);
             Debug.Log(ammunitionsAdded + " were added");
             other.GetComponent<EnemyBulletScript>().Deflected();

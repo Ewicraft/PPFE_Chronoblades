@@ -19,14 +19,22 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     public float timer;
 
+	private SpriteRenderer spriteRenderer;
+
     public float range;
 
     public float shootCooldown = 4f;
     public Transform gunPos;
+
+    public float bulletSpeed;
     [SerializeField] private GameObject enemyBulletPrefab;
 
 
-
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        timer = shootCooldown / 2;
+    }
 
     private void Update()
     {
@@ -35,16 +43,17 @@ public class EnemyAI : MonoBehaviour
         {
             isPlayerInSight = true;
             timer += Time.deltaTime;
-            if (timer > shootCooldown-0.75f)
+            spriteRenderer.flipX = player.transform.position.x < transform.position.x;
+            if (timer > shootCooldown)
             {
                 timer = 0;
-                enemyAnim.SetBool("Shooting", true);
-                Invoke("shoot",0.75f);
+                shoot();
             }
         }
         else
         {
             isPlayerInSight = false;
+            timer = 0;
         }
 
         if (isPlayerInSight == false)
@@ -63,11 +72,11 @@ public class EnemyAI : MonoBehaviour
         Transform goalPoint = points[nextID];
         if (goalPoint.transform.position.x > transform.position.x)
         {
-            transform.localScale = new Vector3(-7, 7, 7);
+            spriteRenderer.flipX = false;
         }
         else
         {
-            transform.localScale = new Vector3(7, 7, 7);
+            spriteRenderer.flipX = true;
         }
         transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed * Time.deltaTime);
         if (Vector2.Distance(transform.position, goalPoint.position) < 0.2f)
@@ -86,12 +95,9 @@ public class EnemyAI : MonoBehaviour
 
     void shoot()
     {
+        enemyAnim.SetTrigger("Shoot");
         GameObject newBullet = Instantiate(enemyBulletPrefab, gunPos.position, Quaternion.identity);
-        Invoke("ShootingStop", 0.75f);
+        newBullet.GetComponent<EnemyBulletScript>().force = bulletSpeed;
     }
 
-    void ShootingStop()
-    {
-        enemyAnim.SetBool("Shooting", false);
-    }
 }

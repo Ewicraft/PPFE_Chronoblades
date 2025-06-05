@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerGun : MonoBehaviour
 {
@@ -16,20 +16,19 @@ public class PlayerGun : MonoBehaviour
 
     [SerializeField] private int ammunitions;
 
-    private int maxBullets;
+    public int maxBullets;
 
     private GameObject gunObject;
     private bool gunFlipMov = true;
-    public GameObject[] ammoUI;
+    public Image[] ammoUI;
+
+    public Sprite fullBullet;
+    public Sprite emptyBullet;
 
     void Start()
     {
         gunObject = GameObject.Find("Gun");
         gunObject.SetActive(false);
-        maxBullets = ammunitions;
-        // for(int i = 0; i <= 5; i++){
-        //     ammoUI[i].gameObject.SetActive(false);
-        // }
     }
 
 
@@ -39,6 +38,38 @@ public class PlayerGun : MonoBehaviour
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - gun.position;
+
+        for (int i = 0; i < ammoUI.Length; i++)
+        {
+
+            if (i < ammunitions)
+            {
+                ammoUI[i].sprite = fullBullet;
+            }
+            else
+            {
+                ammoUI[i].sprite = emptyBullet;
+            }
+
+            if (i < maxBullets)
+            {
+                ammoUI[i].enabled = true;
+            }
+            else
+            {
+                ammoUI[i].enabled = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                AddBullet(maxBullets);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ShootTheGame();
+            }
+        }
 
 
         gun.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
@@ -50,7 +81,7 @@ public class PlayerGun : MonoBehaviour
         {
             Shoot(direction);
         }
-        else if(ammunitions <= 0)
+        else if (ammunitions <= 0)
         {
             Debug.Log("NoMoreBullets!");
         }
@@ -69,7 +100,7 @@ public class PlayerGun : MonoBehaviour
         {
             gunObject.SetActive(true);
         }
-        else if(ammunitions <= 0)
+        else if (ammunitions <= 0)
         {
             gunObject.SetActive(false);
         }
@@ -99,17 +130,16 @@ public class PlayerGun : MonoBehaviour
     }
     void Shoot(Vector3 direction)
     {
-            gunAnim.SetTrigger("Shoot");
+        gunAnim.SetTrigger("Shoot");
 
-            GameObject newBullet = Instantiate(bulletPrefab, gun.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * bulletSpeed;
-            ammunitions -= 1;
-            ammoUI[ammunitions].gameObject.SetActive(false);
-            Debug.Log(ammunitions + " are left");
-            if (isActiveAndEnabled == true)
-            {
-                Invoke("GunOff", 1);
-            }
+        GameObject newBullet = Instantiate(bulletPrefab, gun.position, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * bulletSpeed;
+        ammunitions -= 1;
+        Debug.Log(ammunitions + " are left");
+        if (isActiveAndEnabled == true)
+        {
+            Invoke("GunOff", 1);
+        }
 
     }
 
@@ -118,16 +148,22 @@ public class PlayerGun : MonoBehaviour
     public void AddBullet(int bullets)
     {
         ammunitions += bullets;
-        if(ammunitions < maxBullets)
+        if (ammunitions > maxBullets)
         {
             ammunitions = maxBullets;
         }
+    }
+
+    public void ShootTheGame()
+    {
+        if (ammunitions > 0)
+        {
+            Application.Quit();
+        }
         else
         {
-            for(int i = 0; i <= 5; i++)
-            {
-                ammoUI[i].gameObject.SetActive(true);
-            }
+            //il tire quand même 
+            Application.Quit();
         }
     }
 }
